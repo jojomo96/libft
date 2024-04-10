@@ -10,51 +10,51 @@ OBJDIR := obj
 # Library name
 NAME := libft.a
 
-HEADERS := libft.h ft_printf/ft_printf.h ft_dlist/ft_dlist.h
+HEADERS := ft_libft/libft.h ft_printf/ft_printf.h ft_dlist/ft_dlist.h
 
 # Source files
-SRCS := ft_atoi.c \
-		ft_bzero.c \
-		ft_calloc.c \
-		ft_isalnum.c \
-		ft_isalpha.c \
-		ft_isascii.c \
-		ft_isdigit.c \
-		ft_isprint.c \
-		ft_itoa.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_memcpy.c \
-		ft_memmove.c \
-		ft_memset.c \
-		ft_putchar_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-		ft_putstr_fd.c \
-		ft_split.c \
-		ft_strchr.c \
-		ft_strdup.c \
-		ft_strjoin.c \
-		ft_strlcat.c \
-		ft_strlcpy.c \
-		ft_strlen.c \
-		ft_strmapi.c \
-		ft_strncmp.c \
-		ft_strnstr.c \
-		ft_strrchr.c \
-		ft_strtrim.c \
-		ft_substr.c \
-		ft_tolower.c \
-		ft_toupper.c \
-		ft_striteri.c \
-		ft_dtoa.c \
-		ft_strcspn.c \
-		ft_combine_numbers_fixed_width.c \
-		ft_strtod.c \
-		ft_isspace.c \
-		ft_strcmp.c \
-		ft_is_str_digit.c \
-		ft_realloc.c \
+SRCS := ft_libft/ft_atoi.c \
+		ft_libft/ft_bzero.c \
+		ft_libft/ft_calloc.c \
+		ft_libft/ft_isalnum.c \
+		ft_libft/ft_isalpha.c \
+		ft_libft/ft_isascii.c \
+		ft_libft/ft_isdigit.c \
+		ft_libft/ft_isprint.c \
+		ft_libft/ft_itoa.c \
+		ft_libft/ft_memchr.c \
+		ft_libft/ft_memcmp.c \
+		ft_libft/ft_memcpy.c \
+		ft_libft/ft_memmove.c \
+		ft_libft/ft_memset.c \
+		ft_libft/ft_putchar_fd.c \
+		ft_libft/ft_putendl_fd.c \
+		ft_libft/ft_putnbr_fd.c \
+		ft_libft/ft_putstr_fd.c \
+		ft_libft/ft_split.c \
+		ft_libft/ft_strchr.c \
+		ft_libft/ft_strdup.c \
+		ft_libft/ft_strjoin.c \
+		ft_libft/ft_strlcat.c \
+		ft_libft/ft_strlcpy.c \
+		ft_libft/ft_strlen.c \
+		ft_libft/ft_strmapi.c \
+		ft_libft/ft_strncmp.c \
+		ft_libft/ft_strnstr.c \
+		ft_libft/ft_strrchr.c \
+		ft_libft/ft_strtrim.c \
+		ft_libft/ft_substr.c \
+		ft_libft/ft_tolower.c \
+		ft_libft/ft_toupper.c \
+		ft_libft/ft_striteri.c \
+		ft_libft/ft_dtoa.c \
+		ft_libft/ft_strcspn.c \
+		ft_libft/ft_combine_numbers_fixed_width.c \
+		ft_libft/ft_strtod.c \
+		ft_libft/ft_isspace.c \
+		ft_libft/ft_strcmp.c \
+		ft_libft/ft_is_str_digit.c \
+		ft_libft/ft_realloc.c \
 		ft_printf/ft_printf.c \
 		ft_printf/ft_bools.c \
 		ft_printf/ft_handle_char.c \
