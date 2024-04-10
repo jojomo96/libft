@@ -1,0 +1,12 @@
+*
+
+!*.c
+!*.h
+!Makefile
+
+!*/
+!*/*.c
+!*/*.h
+!.gitignore
+
+obj/
