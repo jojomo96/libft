@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_int_helper.c                                    :+:      :+:    :+:   */
+/*   ft_dlist_append_unique.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmoritz < jmoritz@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 16:46:44 by jmoritz           #+#    #+#             */
-/*   Updated: 2024/04/16 18:25:38 by jmoritz          ###   ########.fr       */
+/*   Created: 2024/04/11 15:59:59 by jmoritz           #+#    #+#             */
+/*   Updated: 2024/04/11 17:34:32 by jmoritz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_dlist.h"
+#include <stdio.h>
 
-int	ft_handle_int_number(long n, t_params params, t_dca *str)
+bool	ft_dlist_append_unique(t_dlist *lst, t_dlist_node *new,
+		int (*cmp)(void *, void *))
 {
-	char	*nbr;
+	t_dlist_node	*current;
 
-	if (n == 0 && params.flags & PRECISION)
-		return (0);
-	nbr = ft_itoa(n);
-	if (ft_dca_add_str(str, nbr, ft_strlen(nbr)) == -1)
+	if (!lst || !new)
+		return (false);
+	current = lst->head;
+	while (current)
 	{
-		return (-1);
+		if (cmp(current->content, new->content) == 0)
+			return (false);
+		current = current->next;
 	}
-	free(nbr);
-	return (0);
+	ft_dlist_append(lst, new);
+	return (true);
 }

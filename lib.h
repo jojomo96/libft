@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_int_helper.c                                    :+:      :+:    :+:   */
+/*   lib.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmoritz < jmoritz@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 16:46:44 by jmoritz           #+#    #+#             */
-/*   Updated: 2024/04/16 18:25:38 by jmoritz          ###   ########.fr       */
+/*   Created: 2024/04/11 12:37:50 by jmoritz           #+#    #+#             */
+/*   Updated: 2024/04/23 11:30:43 by jmoritz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef LIB_H
+# define LIB_H
 
-int	ft_handle_int_number(long n, t_params params, t_dca *str)
-{
-	char	*nbr;
+# include "ft_dlist/ft_dlist.h"
+# include "ft_printf/ft_printf.h"
+# include "ft_libft/libft.h"
+# include "ft_get_next_line/ft_get_next_line.h"
 
-	if (n == 0 && params.flags & PRECISION)
-		return (0);
-	nbr = ft_itoa(n);
-	if (ft_dca_add_str(str, nbr, ft_strlen(nbr)) == -1)
-	{
-		return (-1);
-	}
-	free(nbr);
-	return (0);
-}
+#endif

@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_int_helper.c                                    :+:      :+:    :+:   */
+/*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmoritz < jmoritz@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 16:46:44 by jmoritz           #+#    #+#             */
-/*   Updated: 2024/04/16 18:25:38 by jmoritz          ###   ########.fr       */
+/*   Created: 2024/04/11 15:52:08 by jmoritz           #+#    #+#             */
+/*   Updated: 2024/04/11 17:01:51 by jmoritz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_handle_int_number(long n, t_params params, t_dca *str)
+int	ft_isnumber(char *str)
 {
-	char	*nbr;
+	int	i;
 
-	if (n == 0 && params.flags & PRECISION)
-		return (0);
-	nbr = ft_itoa(n);
-	if (ft_dca_add_str(str, nbr, ft_strlen(nbr)) == -1)
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i])
 	{
-		return (-1);
+		if (!ft_isdigit(str[i]))
+			return (0);
+		i++;
 	}
-	free(nbr);
-	return (0);
+	return (1);
 }

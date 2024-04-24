@@ -6,7 +6,7 @@
 /*   By: jmoritz < jmoritz@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 13:48:51 by jmoritz           #+#    #+#             */
-/*   Updated: 2024/04/10 15:54:28 by jmoritz          ###   ########.fr       */
+/*   Updated: 2024/04/16 09:43:57 by jmoritz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_dlist_node	*ft_dlist_peek_back(t_dlist *lst)
 	return (lst->tail);
 }
 
-size_t		ft_dlist_size(t_dlist *lst)
+size_t	ft_dlist_size(t_dlist *lst)
 {
 	if (!lst)
 		return (0);
@@ -43,7 +43,7 @@ void	ft_dlist_node_destroy(t_dlist_node **node, void (*del)(void *))
 	*node = NULL;
 }
 
-void	ft_dlist_print(t_dlist *lst, void (*print)(void *))
+void	ft_dlist_print(t_dlist *lst, void (*print)(t_dlist_node *))
 {
 	t_dlist_node	*tmp;
 
@@ -52,7 +52,7 @@ void	ft_dlist_print(t_dlist *lst, void (*print)(void *))
 	tmp = lst->head;
 	while (tmp)
 	{
-		print(tmp->content);
+		print(tmp);
 		tmp = tmp->next;
 	}
 }
