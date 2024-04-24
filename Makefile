@@ -4,15 +4,18 @@ CC := cc
 # Compiler flags
 CFLAGS := -Wall -Wextra -Werror
 
+# Base source directory
+BASE_SRC_DIR := src
+
 # Directories
 OBJDIR := obj
-SRC_DIRS := ft_libft ft_printf ft_dlist ft_get_next_line
+SRC_DIRS := $(BASE_SRC_DIR)/ft_libft $(BASE_SRC_DIR)/ft_printf $(BASE_SRC_DIR)/ft_dlist $(BASE_SRC_DIR)/ft_get_next_line
 
 # Library name
 NAME := libft.a
 
 # Header files
-HEADERS := ft_libft/libft.h ft_printf/ft_printf.h ft_dlist/ft_dlist.h ft_get_next_line/ft_get_next_line.h
+HEADERS := $(BASE_SRC_DIR)/ft_libft/libft.h $(BASE_SRC_DIR)/ft_printf/ft_printf.h $(BASE_SRC_DIR)/ft_dlist/ft_dlist.h $(BASE_SRC_DIR)/ft_get_next_line/ft_get_next_line.h include/lib.h
 
 # Source files structured by module
 LIBFT_SRCS := ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
@@ -39,7 +42,7 @@ GNL_SRCS := ft_get_next_line.c
 SRCS := $(LIBFT_SRCS) $(PRINTF_SRCS) $(DLIST_SRCS) $(GNL_SRCS)
 
 # Define VPATH to locate source files
-VPATH := ft_libft:ft_printf:ft_dlist:ft_get_next_line
+VPATH := $(SRC_DIRS)
 
 # Object files
 OBJS := $(patsubst %.c,$(OBJDIR)/%.o,$(SRCS))
@@ -51,20 +54,24 @@ CURRENT := 0
 # Colors
 RED := \033[0;31m
 GREEN := \033[0;32m
-YELLOW := \033[1;33m
+YELLOW := \033[0;33m
 NC := \033[0m # No Color
 
 # Create obj directory and compile the library
 all: start_build $(NAME)
 
 start_build:
-	@echo "$(YELLOW)Building library...$(NC)"
+	@if [ -n "`find $(SRC_DIRS) -name '*.c' -newer $(NAME) 2>/dev/null`" ] || [ ! -f "$(NAME)" ]; then \
+		echo "$(YELLOW)Building library...$(NC)"; \
+	else \
+		echo "$(GREEN)Library is up to date. Nothing to build.$(NC)"; \
+	fi
 
 $(NAME): $(OBJS)
 	@ar rcs $@ $^
 	@echo "$(GREEN)Library built.$(NC)"
 
-$(OBJDIR)/%.o: %.c
+$(OBJDIR)/%.o: %.c $(HEADERS)
 	@mkdir -p $(@D)
 	@$(CC) $(CFLAGS) -c $< -o $@ >/dev/null 2>&1
 	$(eval CURRENT=$(shell echo $$(($(CURRENT) + 1))))
