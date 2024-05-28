@@ -41,8 +41,8 @@ GNL_SRCS := ft_get_next_line.c
 # Full list of source files
 SRCS := $(LIBFT_SRCS) $(PRINTF_SRCS) $(DLIST_SRCS) $(GNL_SRCS)
 
-# Define VPATH to locate source files
-VPATH := $(SRC_DIRS)
+# Define vpath to locate source files
+vpath %.c $(SRC_DIRS)
 
 # Object files
 OBJS := $(patsubst %.c,$(OBJDIR)/%.o,$(SRCS))
@@ -62,14 +62,14 @@ all: start_build $(NAME)
 
 start_build:
 	@if [ -n "`find $(SRC_DIRS) -name '*.c' -newer $(NAME) 2>/dev/null`" ] || [ ! -f "$(NAME)" ]; then \
-		echo "$(YELLOW)Building library...$(NC)"; \
+		printf "$(YELLOW)Building library...$(NC)\n"; \
 	else \
-		echo "$(GREEN)Library is up to date. Nothing to build.$(NC)"; \
+		printf "$(GREEN)Library is up to date. Nothing to build.$(NC)\n"; \
 	fi
 
 $(NAME): $(OBJS)
 	@ar rcs $@ $^
-	@echo "$(GREEN)Library built.$(NC)"
+	@printf "$(GREEN)Library built.$(NC)\n"
 
 $(OBJDIR)/%.o: %.c $(HEADERS)
 	@mkdir -p $(@D)
@@ -84,15 +84,15 @@ $(OBJDIR)/%.o: %.c $(HEADERS)
 
 # Clean rule
 clean:
-	@echo "$(RED)Cleaning objects...$(NC)"
+	@printf "$(RED)Cleaning objects...$(NC)\n"
 	@rm -rf $(OBJDIR)
-	@echo "$(RED)Objects cleaned.$(NC)"
+	@printf "$(RED)Objects cleaned.$(NC)\n"
 
 # Clean and remove library rule
 fclean: clean
-	@echo "$(RED)Removing library...$(NC)"
+	@printf "$(RED)Removing library...$(NC)\n"
 	@rm -f $(NAME)
-	@echo "$(RED)Library removed.$(NC)"
+	@printf "$(RED)Library removed.$(NC)\n"
 
 # Rebuild rule
 re: fclean all
