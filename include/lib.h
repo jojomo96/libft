@@ -17,5 +17,6 @@
 # include "../src/ft_printf/ft_printf.h"
 # include "../src/ft_libft/libft.h"
 # include "../src/ft_get_next_line/ft_get_next_line.h"
+# include "../src/ft_vector/2d/ft_vector_2d.h"
 
 #endif
