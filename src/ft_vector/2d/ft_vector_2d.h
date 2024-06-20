@@ -25,5 +25,6 @@ t_vector_2d ft_vector_sub(t_vector_2d a, t_vector_2d b);
 t_vector_2d ft_vector_mul(t_vector_2d a, t_vector_2d b);
 t_vector_2d ft_vector_div(t_vector_2d a, t_vector_2d b);
 t_vector_2d ft_vector_scale(t_vector_2d a, double scale);
+void        ft_print_vector(t_vector_2d vector);
 
 #endif

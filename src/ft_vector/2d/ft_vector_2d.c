@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_vector_2d.h"
+#include <stdio.h>
 
 t_vector_2d    ft_vector_init(double x, double y)
 {
@@ -19,4 +20,9 @@ t_vector_2d    ft_vector_init(double x, double y)
     vector.x = x;
     vector.y = y;
     return (vector);
+}
+
+void    ft_print_vector(t_vector_2d vector)
+{
+    printf("Vector: (%f, %f)\n", vector.x, vector.y);
 }
