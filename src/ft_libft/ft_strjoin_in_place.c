@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 09:16:18 by vscode            #+#    #+#             */
-/*   Updated: 2024/06/26 12:41:33 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/06/26 14:25:19 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin_in_place(char *s1, const char *s2)
 {
 	char	*result;
 
-	result = ft_strjoin(s1, s2);
+	result = ft_strjoin_better(s1, s2);
 	free(s1);
 	return (result);
 }
