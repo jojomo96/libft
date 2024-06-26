@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 14:23:01 by lzipp             #+#    #+#             */
-/*   Updated: 2024/06/26 14:24:51 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/06/26 14:34:18 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strjoin_better(char const *s1, char const *s2)
 	size_t	s2_len;
 
 	if (!s1)
-		return (s2);
+		return (ft_strdup(s2));
 	if (!s2)
-		return (s1);
+		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	new_str = (char *)malloc(s1_len + s2_len + 1);
