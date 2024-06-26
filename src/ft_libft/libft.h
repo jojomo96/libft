@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 18:20:22 by jmoritz           #+#    #+#             */
-/*   Updated: 2024/06/26 12:41:45 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/06/26 14:14:55 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct s_iteators
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t count, size_t size);
+int					ft_contains_only(const char *str, const char *set);
 int					ft_contains(char *str, char *set);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
