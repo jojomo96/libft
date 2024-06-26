@@ -16,18 +16,25 @@ int	ft_contains_only(const char *str, const char *set)
 {
 	int		i;
 	int		j;
+	int		found;
 
-	i = -1;
-	while (str[++i])
+	i = 0;
+	while (str[i])
 	{
-		j = -1;
-		while (set[++j])
+		j = 0;
+		found = 0;
+		while (set[j])
 		{
 			if (str[i] == set[j])
-				;
-			else if (str[i] != set[j])
-				return (0);
+			{
+				found = 1;
+				break;
+			}
+			j++;
 		}
+		if (!found)
+			return (0);
+		i++;
 	}
 	return (1);
 }
