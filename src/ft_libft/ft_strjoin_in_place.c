@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin_in_place.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 09:16:18 by vscode            #+#    #+#             */
-/*   Updated: 2024/06/26 09:18:02 by vscode           ###   ########.fr       */
+/*   Updated: 2024/06/26 12:41:33 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * @param s2 The second string.
  * @return The new string.
  */
-char	*ft_strjoin_in_place(char *s1, char *s2)
+char	*ft_strjoin_in_place(char *s1, const char *s2)
 {
 	char	*result;
 

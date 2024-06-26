@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 18:20:22 by jmoritz           #+#    #+#             */
-/*   Updated: 2024/06/26 12:22:14 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/06/26 12:41:45 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char				**ft_split(char const *s, char c);
 char				*ft_strdup(const char *s1);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
-char				*ft_strjoin_in_place(char const *s1, char const *s2);
+char				*ft_strjoin_in_place(char *s1, const char *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
