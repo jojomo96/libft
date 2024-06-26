@@ -6,19 +6,26 @@
 /*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 09:04:57 by vscode            #+#    #+#             */
-/*   Updated: 2024/06/26 09:05:46 by vscode           ###   ########.fr       */
+/*   Updated: 2024/06/26 09:10:21 by vscode           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_contains(char *str, char c)
+int	ft_contains(char *str, char *set)
 {
-	while (*str)
+	int	i;
+	int	j;
+	
+	i = -1;
+	while (str[++i])
 	{
-		if (*str == c)
-			return (1);
-		str++;
+		j = -1;
+		while (set[++j])
+		{
+			if (str[i] == set[j])
+				return (1);
+		}
 	}
 	return (0);
 }
