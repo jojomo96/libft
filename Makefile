@@ -28,7 +28,7 @@ LIBFT_SRCS := ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
               ft_strcspn.c ft_combine_numbers_fixed_width.c ft_strtod.c \
               ft_isspace.c ft_strcmp.c ft_is_str_digit.c ft_realloc.c ft_isnumber.c \
               ft_contains_only.c ft_contains.c ft_strjoin_in_place.c ft_strjoin_better.c \
-              ft_strrncmp.c ft_strtrim_in_place.c
+              ft_strrncmp.c ft_strtrim_in_place.c ft_free_arr.c
 
 PRINTF_SRCS := ft_printf.c ft_bools.c ft_handle_char.c ft_getters.c ft_dynamic_char_array.c \
                ft_estimate_size.c ft_handle_format.c ft_handle_string.c ft_handle_int.c \

@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 18:20:22 by jmoritz           #+#    #+#             */
-/*   Updated: 2024/06/26 14:26:48 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/06/28 11:52:23 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,8 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_is_str_digit(const char *str);
 void				*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 int					ft_isnumber(char *str);
+void				ft_free_2d_arr(void **arr);
+void				ft_free_3d_arr(void ***arr);
+void				ft_free_4d_arr(void ****arr);
 
 #endif
