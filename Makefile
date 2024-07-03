@@ -9,13 +9,13 @@ BASE_SRC_DIR := src
 
 # Directories
 OBJDIR := obj
-SRC_DIRS := $(BASE_SRC_DIR)/ft_libft $(BASE_SRC_DIR)/ft_printf $(BASE_SRC_DIR)/ft_dlist $(BASE_SRC_DIR)/ft_get_next_line
+SRC_DIRS := $(BASE_SRC_DIR)/ft_libft $(BASE_SRC_DIR)/ft_printf $(BASE_SRC_DIR)/ft_dlist $(BASE_SRC_DIR)/ft_get_next_line $(BASE_SRC_DIR)/ft_vector/2d
 
 # Library name
 NAME := libft.a
 
 # Header files
-HEADERS := $(BASE_SRC_DIR)/ft_libft/libft.h $(BASE_SRC_DIR)/ft_printf/ft_printf.h $(BASE_SRC_DIR)/ft_dlist/ft_dlist.h $(BASE_SRC_DIR)/ft_get_next_line/ft_get_next_line.h include/lib.h
+HEADERS := $(BASE_SRC_DIR)/ft_libft/libft.h $(BASE_SRC_DIR)/ft_printf/ft_printf.h $(BASE_SRC_DIR)/ft_dlist/ft_dlist.h $(BASE_SRC_DIR)/ft_get_next_line/ft_get_next_line.h include/lib.h $(BASE_SRC_DIR)/ft_vector/2d/ft_vector_2d.h
 
 # Source files structured by module
 LIBFT_SRCS := ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
@@ -38,10 +38,12 @@ PRINTF_SRCS := ft_printf.c ft_bools.c ft_handle_char.c ft_getters.c ft_dynamic_c
 DLIST_SRCS := ft_dlist_edit.c ft_dlist_find.c ft_dlist_rotate.c ft_dlist_utils.c ft_dlist.c \
               ft_dlist_append_unique.c ft_dlist_sort.c ft_dlist_get.c
 
+VECT_SRCS := ft_vector_2d_utils.c ft_vector_2d.c
+
 GNL_SRCS := ft_get_next_line.c
 
 # Full list of source files
-SRCS := $(LIBFT_SRCS) $(PRINTF_SRCS) $(DLIST_SRCS) $(GNL_SRCS)
+SRCS := $(LIBFT_SRCS) $(PRINTF_SRCS) $(DLIST_SRCS) $(GNL_SRCS) $(VECT_SRCS)
 
 # Define vpath to locate source files
 vpath %.c $(SRC_DIRS)
