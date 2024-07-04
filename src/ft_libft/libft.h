@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 18:20:22 by jmoritz           #+#    #+#             */
-/*   Updated: 2024/06/20 17:01:00 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/07/02 13:33:36 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ typedef struct s_iteators
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t count, size_t size);
+int					ft_contains_only(const char *str, const char *set);
+int					ft_contains(char *str, char *set);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
@@ -63,8 +65,11 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr_fd(char *s, int fd);
 char				**ft_split(char const *s, char c);
 char				*ft_strdup(const char *s1);
+char				**ft_strdup_2d(char **src);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin_in_place(char *s1, const char *s2);
+char				*ft_strjoin_better(char const *s1, char const *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
@@ -89,5 +94,8 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_is_str_digit(const char *str);
 void				*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 int					ft_isnumber(char *str);
+void				ft_free_2d_arr(void **arr);
+void				ft_free_3d_arr(void ***arr);
+void				ft_free_4d_arr(void ****arr);
 
 #endif
