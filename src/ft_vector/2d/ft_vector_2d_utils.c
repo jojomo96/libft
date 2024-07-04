@@ -39,13 +39,19 @@ t_vector_2d    ft_vector_mul(t_vector_2d a, t_vector_2d b)
     return (vector);
 }
 
-t_vector_2d    ft_vector_div(t_vector_2d a, t_vector_2d b)
+t_vector_2d ft_vector_div(t_vector_2d a, t_vector_2d b)
 {
-    t_vector_2d    vector;
+    t_vector_2d vector;
 
-    vector.x = a.x / b.x;
-    vector.y = a.y / b.y;
-    return (vector);
+    if (b.x == 0 || b.y == 0) {
+        vector.x = 0;
+        vector.y = 0;
+    } else {
+        vector.x = a.x / b.x;
+        vector.y = a.y / b.y;
+    }
+
+    return vector;
 }
 
 t_vector_2d    ft_vector_scale(t_vector_2d a, double scale)
