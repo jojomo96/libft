@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vector_2d.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmoritz <jmoritz@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 16:36:55 by jmoritz           #+#    #+#             */
-/*   Updated: 2024/06/20 16:55:14 by jmoritz          ###   ########.fr       */
+/*   Updated: 2024/07/22 20:54:34 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_vector_2d	ft_vector_perpendicular(t_vector_2d vector)
 
 t_vector_2d	ft_vector_rotate(t_vector_2d vector, double angle)
 {
-	t_vector_2d new_vector;
+	t_vector_2d	new_vector;
 
 	new_vector.x = vector.x * cos(angle) - vector.y * sin(angle);
 	new_vector.y = vector.x * sin(angle) + vector.y * cos(angle);

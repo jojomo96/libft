@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 13:42:54 by lzipp             #+#    #+#             */
-/*   Updated: 2024/06/27 16:10:10 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/07/22 20:57:13 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_contains_only(const char *str, const char *set)
 {
 	int		i;
 	int		j;
-	
+
 	i = -1;
 	while (str[++i])
 	{

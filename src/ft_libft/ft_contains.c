@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_contains.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 09:04:57 by vscode            #+#    #+#             */
-/*   Updated: 2024/06/26 09:10:21 by vscode           ###   ########.fr       */
+/*   Updated: 2024/07/22 20:57:02 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_contains(char *str, char *set)
 {
 	int	i;
 	int	j;
-	
+
 	i = -1;
 	while (str[++i])
 	{
