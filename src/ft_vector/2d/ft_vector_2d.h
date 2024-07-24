@@ -28,5 +28,7 @@ t_vector_2d	ft_vector_scale(t_vector_2d a, double scale);
 t_vector_2d	ft_vector_rotate(t_vector_2d vector, double angle);
 t_vector_2d	ft_vector_perpendicular(t_vector_2d vector);
 void		ft_print_vector(t_vector_2d vector);
+double		ft_vector_length(t_vector_2d vector);
+t_vector_2d	ft_vector_normalize(t_vector_2d vector);
 
 #endif

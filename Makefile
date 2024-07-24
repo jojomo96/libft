@@ -38,7 +38,7 @@ PRINTF_SRCS := ft_printf.c ft_bools.c ft_handle_char.c ft_getters.c ft_dynamic_c
 DLIST_SRCS := ft_dlist_edit.c ft_dlist_find.c ft_dlist_rotate.c ft_dlist_utils.c ft_dlist.c \
               ft_dlist_append_unique.c ft_dlist_sort.c ft_dlist_get.c
 
-VECT_SRCS := ft_vector_2d_utils.c ft_vector_2d.c
+VECT_SRCS := ft_vector_2d_utils.c ft_vector_2d.c ft_vector_2d_utils2.c
 
 GNL_SRCS := ft_get_next_line.c
 
